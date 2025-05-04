@@ -1,0 +1,32 @@
+@TravelAgency_HostAddress = http://localhost:5288
+
+GET {{TravelAgency_HostAddress}}/api/trips
+Accept: application/json
+
+###
+
+GET {{TravelAgency_HostAddress}}/api/clients/1/trips
+Accept: application/json
+
+###
+
+POST {{TravelAgency_HostAddress}}/api/clients
+Content-Type: application/json
+
+{
+  "FirstName": "William",
+  "LastName": "Afton",
+  "Email": "william.afton@example.com",
+  "Telephone": "202020202",
+  "Pesel": "20202020202"
+}
+
+###
+
+PUT {{TravelAgency_HostAddress}}/api/clients/1/trips/2
+Content-Type: application/json
+
+###
+
+DELETE {{TravelAgency_HostAddress}}/api/clients/1/trips/2
+Content-Type: application/json
